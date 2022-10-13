@@ -24,21 +24,21 @@ public class HelloController {
     @Deprecated
     public void fieldNac(ActionEvent actionEvent) {
     }
-
-    @Deprecated
-    public void fieldNombreTyped(Event event) {
-        if (fieldNombre.getText().length() <= 7) {
-            fieldNombre.setStyle("-fx-background-color: #008000;");
-        } else {
-            fieldNombre.setStyle("-fx-background-color: #FF0000;");
-        }
-    }
     @FXML
     public void fieldApellidosTyped(Event event) {
-        if (fieldApellidos.getText().length() <= 7) {
-            fieldApellidos.setStyle("-fx-background-color: #008000;");
+        if (fieldApellidos.getText().length() <= 10) {
+            fieldApellidos.setStyle("-fx-background-color: #0000000;");
         } else {
-            fieldApellidos.setStyle("-fx-background-color: #FF0000;");
+            fieldApellidos.setStyle("-fx-background-color: #FF0000; -fx-text-fill: #FFFFFF");
+        }
+    }
+
+    @FXML
+    public void fieldNombreTyped(Event event) {
+        if (fieldNombre.getText().length() <= 7) {
+            fieldNombre.setStyle("-fx-background-color: #0000000;");
+        } else {
+            fieldNombre.setStyle("-fx-background-color: #FF0000; -fx-text-fill: #FFFFFF");
         }
     }
 }
